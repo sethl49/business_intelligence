@@ -1,2 +1,2 @@
 # business_intelligence
-Initial commit: Add README
+In class work for Fall 2026
