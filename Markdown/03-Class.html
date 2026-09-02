@@ -1594,9 +1594,34 @@ border-radius: 0px;
 </div>
 
 
+<div id="cincy-crash-data" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Cincy Crash Data</h1>
+<pre class="r"><code>crashes_per_day = 30125 / 365
+crashes_per_day</code></pre>
+<pre><code>## [1] 82.53425</code></pre>
+<pre class="r"><code>crashes_by_day = c(2020, 2241, 2327, 2285,
+                   2380, 1866, 1664)
+names(crashes_by_day) = c(&quot;Mon&quot;, &quot;Tue&quot;, &quot;Wed&quot;, &quot;Thu&quot;,
+                          &quot;Fri&quot;, &quot;Sat&quot;, &quot;Sun&quot;)
+crashes_by_day</code></pre>
+<pre><code>##  Mon  Tue  Wed  Thu  Fri  Sat  Sun 
+## 2020 2241 2327 2285 2380 1866 1664</code></pre>
+<pre class="r"><code>crashes_by_day &gt; 2100</code></pre>
+<pre><code>##   Mon   Tue   Wed   Thu   Fri   Sat   Sun 
+## FALSE  TRUE  TRUE  TRUE  TRUE FALSE FALSE</code></pre>
+<div id="type-of-crashes_by_day_" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> Type of
+<code>crashes_by_day_</code></h2>
+<pre class="r"><code>typeof(crashes_by_day)</code></pre>
+<pre><code>## [1] &quot;double&quot;</code></pre>
+<pre class="r"><code>crashes_by_day = c(2020, 2241, 2327, 2285,
+                   2380, 1866, 1664)
+names(crashes_by_day) = c(&quot;Mon&quot;, &quot;Tue&quot;, &quot;Wed&quot;, &quot;Thu&quot;,
+                          &quot;Fri&quot;, &quot;Sat&quot;, &quot;Sun&quot;)</code></pre>
+</div>
+</div>
 
-
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIkNsYXNzIDAzIC0gUiBCYXNpc2NzIg0KYXV0aG9yOiAiU2V0aCBMYXciDQpkYXRlOiAiMjAyNi0wOC0zMSINCm91dHB1dDogDQogIGh0bWxfZG9jdW1lbnQ6DQogICAgdG9jOiB0cnVlDQogICAgdG9jX2Zsb2F0OiB0cnVlDQogICAgbnVtYmVyX3NlY3Rpb25zOiB0cnVlDQogICAgY29kZV9mb2xkaW5nOiBzaG93DQogICAgY29kZV9kb3dubG9hZDogdHJ1ZQ0KLS0tDQoNCmBgYHtyIHNldHVwLCBpbmNsdWRlPUZBTFNFfQ0Ka25pdHI6Om9wdHNfY2h1bmskc2V0KGVjaG8gPSBUUlVFKQ0KYGBgDQoNCg==</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIkNsYXNzIDAzIC0gUiBCYXNpc2NzIg0KYXV0aG9yOiAiU2V0aCBMYXciDQpkYXRlOiAiMjAyNi0wOC0zMSINCm91dHB1dDogDQogIGh0bWxfZG9jdW1lbnQ6DQogICAgdG9jOiB0cnVlDQogICAgdG9jX2Zsb2F0OiB0cnVlDQogICAgbnVtYmVyX3NlY3Rpb25zOiB0cnVlDQogICAgY29kZV9mb2xkaW5nOiBzaG93DQogICAgY29kZV9kb3dubG9hZDogdHJ1ZQ0KLS0tDQoNCmBgYHtyIHNldHVwLCBpbmNsdWRlPUZBTFNFfQ0Ka25pdHI6Om9wdHNfY2h1bmskc2V0KGVjaG8gPSBUUlVFKQ0KYGBgDQoNCg0KIyBDaW5jeSBDcmFzaCBEYXRhDQoNCmBgYHtyIGNpbmN5X2NyYXNoZXN9DQpjcmFzaGVzX3Blcl9kYXkgPSAzMDEyNSAvIDM2NQ0KY3Jhc2hlc19wZXJfZGF5DQoNCmNyYXNoZXNfYnlfZGF5ID0gYygyMDIwLCAyMjQxLCAyMzI3LCAyMjg1LA0KICAgICAgICAgICAgICAgICAgIDIzODAsIDE4NjYsIDE2NjQpDQpuYW1lcyhjcmFzaGVzX2J5X2RheSkgPSBjKCJNb24iLCAiVHVlIiwgIldlZCIsICJUaHUiLA0KICAgICAgICAgICAgICAgICAgICAgICAgICAiRnJpIiwgIlNhdCIsICJTdW4iKQ0KY3Jhc2hlc19ieV9kYXkNCg0KY3Jhc2hlc19ieV9kYXkgPiAyMTAwDQpgYGANCiMjIFR5cGUgb2YgYGNyYXNoZXNfYnlfZGF5X2ANCg0KYGBge3IgdHlwZW9mX3ZlY30NCnR5cGVvZihjcmFzaGVzX2J5X2RheSkNCg0KY3Jhc2hlc19ieV9kYXkgPSBjKDIwMjAsIDIyNDEsIDIzMjcsIDIyODUsDQogICAgICAgICAgICAgICAgICAgMjM4MCwgMTg2NiwgMTY2NCkNCm5hbWVzKGNyYXNoZXNfYnlfZGF5KSA9IGMoIk1vbiIsICJUdWUiLCAiV2VkIiwgIlRodSIsDQogICAgICAgICAgICAgICAgICAgICAgICAgICJGcmkiLCAiU2F0IiwgIlN1biIpDQo=</div>
 
 
 </div>
