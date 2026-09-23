@@ -10,17 +10,19 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r}
-con = DBI::dbConnect(RSQLite::SQLite(), "../data/scout.db")
-postings = DBI::dbReadTable(con, "scout_postings") |> tibble::as_tibble()
-DBI::dbDisconnect(con)
- 
-jobs = postings |>
-  dplyr::select(company, title, location_state, remote, category, posted_at, last_seen_at)
-  dplyr::filter(remote==1)
-  dpylr::mutate(
-    posted_at = as.Date(posted_at),
-    last_seen_at = as.Date(last_een_at),
-    days_open = as.numeric(last_seen_at - posted_at)
-  )
-
+library(querychat)
+con = DBI::dbConnect(RSQLite::SQLite(), "data/scout.db")
+client = ellmer::chat_openai(
+  model  = "gpt-5.6-luna",
+  params = ellmer::params(reasoning_effort = "none")
+)
+qc = querychat(
+  con, "scout_postings",
+  client   = client,
+  tools    = c("filter", "query", "visualize"),
+  greeting = "Ask me about the 1,891 job postings
+              ChatISA Job Scout collected."
+)
+qc$app_obj()
 ```
+
